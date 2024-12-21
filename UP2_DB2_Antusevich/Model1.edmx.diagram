@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3f860754d1be488ba6fb1784ae3e1616" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_UP2Model.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_UP2Model.Партнеры" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_UP2Model.Продукция" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_UP2Model.Производство" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_UP2Model.Склад" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_UP2Model.Сотрудники" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
+        <AssociationConnector Association="DB_UP2Model.FK__Партнеры__ID_Про__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_UP2Model.FK__Производс__ID_Пр__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_UP2Model.FK__Склад__ID_Продук__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_UP2Model.FK__Сотрудник__ID_Пр__3F466844" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

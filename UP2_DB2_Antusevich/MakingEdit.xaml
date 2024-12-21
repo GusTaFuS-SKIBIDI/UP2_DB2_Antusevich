@@ -1,0 +1,50 @@
+﻿<Page x:Class="UP2_DB2_Antusevich.MakingEdit"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UP2_DB2_Antusevich"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MakingEdit" Background="#67BA80">
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="75"/>
+            <!-- Для фото -->
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+            <!-- Для кнопки -->
+        </Grid.ColumnDefinitions>
+
+        <!-- Заголовки для полей -->
+        <TextBox Text="Название" Grid.Row="0" TextAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+        <TextBox Text="Дата_Начала" Grid.Row="1" TextAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True" />
+        <TextBox Text="ID_Продукции" Grid.Row="2" TextAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True"/>
+
+
+        <!-- Поля ввода -->
+        <TextBox Text="{Binding Название}" Grid.Row="0" Height="40" Width="175" Grid.Column="1" HorizontalAlignment="Left"/>
+        <TextBox Text="{Binding Дата_Начала}" Grid.Row="1" Height="40" Width="175" Grid.Column="1" HorizontalAlignment="Left"/>
+        <TextBox Text="{Binding ID_Продукции}" Grid.Row="2" Height="40" Width="175" Grid.Column="1" HorizontalAlignment="Left"/>
+
+
+        <!-- Поле для пути к фотографии -->
+
+
+        <!-- Кнопка для выбора фото -->
+
+
+        <!-- Кнопки -->
+        <Button Content="Сохранить" Grid.Column="1" Grid.Row="5" Name="BtnSave" Click="BtnSave_Click" Width="200" Height="50" HorizontalAlignment="Left"/>
+        <Button Content="Назад" Grid.Column="0" Grid.Row="5" Name="BtnBack" Click="BtnBack_Click" Width="100" Height="50" HorizontalAlignment="Left"/>
+    </Grid>
+</Page>
