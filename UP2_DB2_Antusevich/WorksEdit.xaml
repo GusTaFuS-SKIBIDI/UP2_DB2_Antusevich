@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:UP2_DB2_Antusevich"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="WorksEdit" Background="#67BA80">
+      Title="WorksEdit" Background="White">
 
     <Grid >
         <Grid.RowDefinitions>

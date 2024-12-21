@@ -23,7 +23,7 @@ namespace UP2_DB2_Antusevich
         public Sklad()
         {
             InitializeComponent();
-            DataGridUser.ItemsSource = DB_UP2Entities.GetContext().Склад.ToList();
+            DataGridUser.ItemsSource = UP2_DBEntities.GetContext().Склад.ToList();
         }
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
@@ -40,11 +40,11 @@ namespace UP2_DB2_Antusevich
             {
                 try
                 {
-                    DB_UP2Entities.GetContext().Склад.RemoveRange(ДолжностьForRemoving);
-                    DB_UP2Entities.GetContext().SaveChanges();
+                    UP2_DBEntities.GetContext().Склад.RemoveRange(ДолжностьForRemoving);
+                    UP2_DBEntities.GetContext().SaveChanges();
                     MessageBox.Show("Данные удалены");
 
-                    DataGridUser.ItemsSource = DB_UP2Entities.GetContext().Склад.ToList();
+                    DataGridUser.ItemsSource = UP2_DBEntities.GetContext().Склад.ToList();
 
                 }
                 catch (Exception ex)
@@ -57,7 +57,7 @@ namespace UP2_DB2_Antusevich
         }
         private void BntEdit_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new SkladEdit((sender as Button).DataContext as Склад));
         }
         private void ButtonBeck_Click(object sender, RoutedEventArgs e)
         {

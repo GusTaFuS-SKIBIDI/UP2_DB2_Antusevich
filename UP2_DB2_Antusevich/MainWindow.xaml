@@ -7,22 +7,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
+        <Grid.RowDefinitions >
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!-- Кнопки для перехода в различные разделы -->
-        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+
+        <StackPanel  Background="#F4E8D3 " Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
             <Button Name="ButtonSotrudniki" Content="Сотрудники" Width="120" Margin="5" Click="ButtonSotrudniki_Click"/>
             <Button Name="ButtonPartneri" Content="Партнеры" Width="120" Margin="5" Click="ButtonPartneri_Click"/>
             <Button Name="ButtonProizvodstvo" Content="Производство" Width="120" Margin="5" Click="ButtonProizvodstvo_Click"/>
             <Button Name="ButtonProdukciya" Content="Продукция" Width="120" Margin="5" Click="ButtonProdukciya_Click"/>
             <Button Name="ButtonSklad" Content="Склад" Width="120" Margin="5" Click="ButtonSklad_Click"/>
         </StackPanel>
-        <Button Name="sales" Content="Сотрудники" Width="120" Margin="340,147,340,197" Click="Buttonsales_Click" Grid.Row="1"/>
+        <Button Name="sales" Content="Скидки" Width="120" Margin="340,124,340,197" Click="Buttonsales_Click" Grid.Row="1"/>
 
-        <!-- Используем Frame вместо ContentControl -->
+
         <Frame Grid.Row="1" Name="ContentArea"/>
     </Grid>
 </Window>

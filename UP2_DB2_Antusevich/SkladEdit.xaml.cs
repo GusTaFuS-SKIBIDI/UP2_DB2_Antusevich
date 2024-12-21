@@ -77,12 +77,12 @@ namespace UP2_DB2_Antusevich
 
             if (_currentДолжность.ID_Склада == 0)
             {
-                DB_UP2Entities.GetContext().Склад.Add(_currentДолжность);
+                UP2_DBEntities.GetContext().Склад.Add(_currentДолжность);
             }
 
             try
             {
-                DB_UP2Entities.GetContext().SaveChanges();
+                UP2_DBEntities.GetContext().SaveChanges();
                 MessageBox.Show("Информация сохранена!");
 
             }

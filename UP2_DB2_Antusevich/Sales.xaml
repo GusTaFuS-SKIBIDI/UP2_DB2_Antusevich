@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
 
         <!-- Таблица данных -->
-        <DataGrid Grid.Row="0" Background="#67BA80" Name="DataGridUser" AutoGenerateColumns="True"
+        <DataGrid Grid.Row="0" Background="White" Name="DataGridUser" AutoGenerateColumns="True"
       IsReadOnly="True" SelectionMode="Single" >
 
             <DataGrid.Columns>

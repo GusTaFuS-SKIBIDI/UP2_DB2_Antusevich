@@ -44,25 +44,25 @@ namespace UP2_DB2_Antusevich
 
             if (string.IsNullOrWhiteSpace(Convert.ToString(_currentДолжность.Название)))
             {
-                errors.AppendLine("Введите наименование должности");
+                errors.AppendLine("Введите наименование Название");
 
             }
 
             if (string.IsNullOrWhiteSpace(Convert.ToString(_currentДолжность.Контактное_Лицо)))
             {
-                errors.AppendLine("Введите количество квалификации");
+                errors.AppendLine("Введите  Контактное_Лицо");
 
             }
 
 
             if (string.IsNullOrWhiteSpace(Convert.ToString(_currentДолжность.Телефон)))
             {
-                errors.AppendLine("Введите зарплата");
+                errors.AppendLine("Введите Телефон");
 
             }
             if (string.IsNullOrWhiteSpace(Convert.ToString(_currentДолжность.ID_Производства)))
             {
-                errors.AppendLine("Введите зарплата");
+                errors.AppendLine("Введите ID_Производства");
 
             }
 
@@ -77,12 +77,12 @@ namespace UP2_DB2_Antusevich
 
             if (_currentДолжность.ID_Партнера == 0)
             {
-                DB_UP2Entities.GetContext().Партнеры.Add(_currentДолжность);
+                UP2_DBEntities.GetContext().Партнеры.Add(_currentДолжность);
             }
 
             try
             {
-                DB_UP2Entities.GetContext().SaveChanges();
+                UP2_DBEntities.GetContext().SaveChanges();
                 MessageBox.Show("Информация сохранена!");
 
             }

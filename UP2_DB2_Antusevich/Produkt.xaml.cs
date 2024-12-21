@@ -23,7 +23,7 @@ namespace UP2_DB2_Antusevich
         public Produkt()
         {
             InitializeComponent();
-            DataGridUser.ItemsSource = DB_UP2Entities.GetContext().Продукция.ToList();
+            DataGridUser.ItemsSource = UP2_DBEntities.GetContext().Продукция.ToList();
         }
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
@@ -40,11 +40,11 @@ namespace UP2_DB2_Antusevich
             {
                 try
                 {
-                    DB_UP2Entities.GetContext().Продукция.RemoveRange(ДолжностьForRemoving);
-                    DB_UP2Entities.GetContext().SaveChanges();
+                    UP2_DBEntities.GetContext().Продукция.RemoveRange(ДолжностьForRemoving);
+                    UP2_DBEntities.GetContext().SaveChanges();
                     MessageBox.Show("Данные удалены");
 
-                    DataGridUser.ItemsSource = DB_UP2Entities.GetContext().Продукция.ToList();
+                    DataGridUser.ItemsSource = UP2_DBEntities.GetContext().Продукция.ToList();
 
                 }
                 catch (Exception ex)
@@ -57,7 +57,7 @@ namespace UP2_DB2_Antusevich
         }
         private void BntEdit_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new ProductEdit((sender as Button).DataContext as Продукция));
         }
         private void ButtonBeck_Click(object sender, RoutedEventArgs e)
         {

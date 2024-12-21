@@ -32,19 +32,19 @@ namespace UP2_DB2_Antusevich
             if (DataGridUser.ItemsSource == null)
             {
                 // Загружаем данные из базы
-                var partners = DB_UP2Entities.GetContext().Партнеры.ToList();
+                var partners = UP2_DBEntities.GetContext().Партнеры.ToList();
 
                 // Для каждого партнёра считаем количество уникальных ID_Производства
                 var data = partners.Select(p => new
                 {
                     Название = p.Название,
-                    КоличествоПроизводств = DB_UP2Entities.GetContext().Производство
+                    КоличествоПроизводств = UP2_DBEntities.GetContext().Производство
                         .Where(pr => pr.ID_Производства == p.ID_Производства)  // Фильтрация по ID_Производства
                         .Select(pr => pr.ID_Производства)
                         .Distinct()
                         .Count(), // Подсчитываем количество уникальных ID_Производства
                                   // Логика расчета скидки
-                    Скидка = CalculateDiscount(DB_UP2Entities.GetContext().Производство
+                    Скидка = CalculateDiscount(UP2_DBEntities.GetContext().Производство
                         .Where(pr => pr.ID_Производства == p.ID_Производства)
                         .Select(pr => pr.ID_Производства)
                         .Distinct()

@@ -13,32 +13,22 @@ namespace UP2_DB2_Antusevich
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DB_UP2Entities : DbContext
+    public partial class UP2_DBEntities : DbContext
     {
-        private static DB_UP2Entities _context;
-        public DB_UP2Entities()
-            : base("name=DB_UP2Entities")
+        public UP2_DBEntities()
+            : base("name=UP2_DBEntities")
         {
         }
-        public static DB_UP2Entities GetContext()
-        {
-            if (_context == null)
-                _context = new DB_UP2Entities();
-            return _context;
-        }
-
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Партнеры> Партнеры { get; set; }
         public virtual DbSet<Продукция> Продукция { get; set; }
         public virtual DbSet<Производство> Производство { get; set; }
         public virtual DbSet<Склад> Склад { get; set; }
         public virtual DbSet<Сотрудники> Сотрудники { get; set; }
-
-        
     }
 }

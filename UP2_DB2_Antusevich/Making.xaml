@@ -13,7 +13,7 @@
             <RowDefinition Height="73*" />
         </Grid.RowDefinitions>
 
-        <DataGrid Grid.Row="0" Background="#67BA80" Name="DataGridUser" AutoGenerateColumns="False" IsReadOnly="True"
+        <DataGrid Grid.Row="0" Background="white" Name="DataGridUser" AutoGenerateColumns="False" IsReadOnly="True"
   SelectionMode="Single" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Название" Binding="{Binding Название}" Width="50" />
